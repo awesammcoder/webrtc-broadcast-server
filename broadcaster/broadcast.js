@@ -12,7 +12,7 @@ const config = {
   ]
 };
 
-const socket = io.connect('http://192.168.10.46:4000');
+const socket = io.connect('https://webrtc-broadcast-server.herokuapp.com/');
 
 socket.on("answer", (id, description) => {
   peerConnections[id].setRemoteDescription(description);

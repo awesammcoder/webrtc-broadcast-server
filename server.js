@@ -39,4 +39,4 @@ io.sockets.on("connection", socket => {
   });
 });
 
-server.listen(port, '0.0.0.0', () => console.log(`Server is running on port ${port}`));
+server.listen(process.env.PORT || port, '0.0.0.0', () => console.log(`Server is running on port ${port}`));

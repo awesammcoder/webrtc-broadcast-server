@@ -2,7 +2,6 @@
 /dist
 /node_modules
 /data
-/public
 
 # Ignore files related to API keys
 .env

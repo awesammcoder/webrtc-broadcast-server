@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viewer</title>
+    <meta charset="UTF-8" />
+    <style>
+      html {
+        width: 100vw;
+        height: 100vh;
+        background: #222;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      video {
+        margin-top: 5px;
+        min-width: 80vw;
+        max-width: 100vw;
+        width: 100%;
+        max-height: 100vh;
+        background: #000;
+      }
+
+      button, select, a, input {
+        height: 50px;
+        font-size: 1.2em;
+      }
+
+      button {
+        background: orange;
+        outline: none;
+        border: none;
+        min-width: 150px;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 80vw;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+      }
+
+      .between {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="between">
+        <a href="/broadcast">>> Go to Broadcast >></a>
+        <div>
+          <input type="text" id="server">
+          <button id="connect">Connect</button>
+        </div>
+      </div>
+      <video autoplay muted controls></video>
+    </div>
+
+    <script src="/socket.io.js"></script>
+    <script src="/watch.js"></script>
+  </body>
+</html>

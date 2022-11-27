@@ -16,6 +16,10 @@ const io = require("socket.io")(server, {
 
 app.use(express.static(__dirname + "/public"));
 
+app.get('/broadcast', (req, res) => {
+  res.sendFile(__dirname + '/public/broadcast.html');
+});
+
 io.sockets.on("error", e => console.log(e));
 io.sockets.on("connection", socket => {
   socket.on("broadcaster", () => {
